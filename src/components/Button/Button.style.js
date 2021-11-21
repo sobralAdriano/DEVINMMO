@@ -7,8 +7,6 @@ export const StyledButton = styled.button`
   border: none;
   border-radius: var(--borda-radius);
   box-shadow: var(--sombra-padrao);
-  color: ${(props) => (props.corBotao ? "var(--cor-branco)" : "#000")};
-  background-color: ${(props) => props.corBotao};
   opacity: 1;
   cursor: pointer;
   transition: opacity 180ms ease-in-out;

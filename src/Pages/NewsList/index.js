@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from "react";
 import { NewsCard } from "../../components/NewsCard";
-import { Button, Grid, CircularProgress } from "@mui/material";
+import { Grid, CircularProgress } from "@mui/material";
 import { DefaultPage } from "../../templates/DefaultPage";
+import { StyledButton } from "../../components/Button/Button.style";
+import { StyledInput } from "../../components/Search/Search.styles";
 
 export const ListedNews = () => {
 
@@ -24,18 +26,21 @@ export const ListedNews = () => {
     return(
     <>
         <DefaultPage>
+         <StyledInput type="search" placeholder="Pesquisar news"/>
             <Grid container spacing={2}>   
                 {news.length > 0 ?(
                  news.map(notice => (
+                  <>
                     <Grid sm={6} md={4} lg={4} key={notice.id} item>     
                         <NewsCard 
+                            thumb = {notice.thumbnail}
                             title = {notice.title} 
-                            genre = {notice.genre} 
                             description = {notice.short_description} 
-                            thumb = {notice.thumbnail}/>
-                        <Button color="primary" variant="contained" size="large" onClick={""}>VER MAIS</Button>
+                            />
+                        <StyledButton color="primary" variant="contained" size="large" onClick={""}>VER NO SITE</StyledButton> 
                     </Grid>
-
+                    
+                  </>
                 ))
                 
                  ): <CircularProgress/> }

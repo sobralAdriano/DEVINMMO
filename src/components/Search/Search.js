@@ -15,13 +15,10 @@ const GamesSearch = () => {
   return (
     <input
         type="search"
-        className="promotion-search__input"
-        placeholder="Buscar"
+        placeholder="Pesquisar Games"
         value={search}
         onChange={(ev) => setSearch(ev.target.value)}
       />
-      <PromotionList promotions={promotions} loading={!promotions.length} />
-    </div>
   );
 };
 

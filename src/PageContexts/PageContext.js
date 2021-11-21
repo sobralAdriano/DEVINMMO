@@ -19,12 +19,12 @@ const initial_state = {
   game: null,
 };
 
-const reducer = (state, valueFromSetter) => {
-  switch (valueFromSetter.type) {
+const reducer = (state, gameValue) => {
+  switch (gameValue.type) {
     case "SET_GAMES":
-      return { ...state, games: valueFromSetter.content };
+      return { ...state, games: gameValue.content };
     case "SET_GAME":
-      return { ...state, game: valueFromSetter.content };
+      return { ...state, game: gameValue.content };
     default:
       return state;
   }

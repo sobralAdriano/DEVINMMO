@@ -14,7 +14,7 @@ export const ListedGames = () => {
     return(
     <>
         <DefaultPage>
-            <StyledInput/>
+            <StyledInput type="search" placeholder="Pesquisar Games" />
        
                 <Grid container spacing={2}> 
                     {games.length > 0 ?(
