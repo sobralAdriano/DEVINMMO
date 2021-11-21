@@ -6,9 +6,10 @@ import DetailedGame from "../Pages/GamesDetails";
 
  export const routes = [
     { path: "/", exact: true, component: HomePage },
-    { path: "/games/id", exact: true, component: DetailedGame },
+    { path: "/games/:id", exact: true, component: DetailedGame },
     { path: "/games", exact: true, component: ListedGames },
     { path: "/news", exact: true, component: ListedNews },
     
   ];
 
+  

@@ -14,7 +14,7 @@ const DetailedGame = () => {
     }
     
     const {id} = useParams();
-    const { state, fetchGameDetails, clearGame } = useListedGames();
+    const { state, fetchGameDetails, clearGame } = useListedGames([]);
     const { game } = state;
     
 

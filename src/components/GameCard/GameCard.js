@@ -2,12 +2,12 @@ import { CardHeader, Card, CardMedia, CardContent, Typography, CardActions } fro
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-export const GameCard = ({ id, title, genre, description, thumb }) => {
+export const GameCard = ({ id, title, description, thumb }) => {
   
   const history = useHistory();
 
   function navigateToGamesDetails() {
-         history.push(`/games/:${id}`);
+         history.push(`/games/${id}`);
    }
 
   return (
